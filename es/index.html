@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabriel Guedes</title>
+<meta name="description" content="Gabriel Guedes, matemático en la UFRPE (Recife, Brasil). Geometría algebraica enumerativa, teoría de números, combinatoria.">
+<link rel="canonical" href="https://gabrielguedesmath.github.io/es/">
+<link rel="alternate" hreflang="en" href="https://gabrielguedesmath.github.io/">
+<link rel="alternate" hreflang="pt-BR" href="https://gabrielguedesmath.github.io/pt/">
+<link rel="alternate" hreflang="es" href="https://gabrielguedesmath.github.io/es/">
+<link rel="alternate" hreflang="fr" href="https://gabrielguedesmath.github.io/fr/">
+<link rel="alternate" hreflang="x-default" href="https://gabrielguedesmath.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: fixed identity column on the left (name, post, links), reading column on the right. */
+:root {
+  --paper: #f6f8f7;
+  --panel: #edf1ef;
+  --ink: #17211f;
+  --muted: #586764;
+  --rule: #d5dcd9;
+  --accent: #0d5f57;
+  --font-display: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-ui: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #101615;
+    --panel: #161e1c;
+    --ink: #e4ebe8;
+    --muted: #94a39f;
+    --rule: #27322f;
+    --accent: #63c5b6;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #101615;
+  --panel: #161e1c;
+  --ink: #e4ebe8;
+  --muted: #94a39f;
+  --rule: #27322f;
+  --accent: #63c5b6;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+}
+a { color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 24px 72px;
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+/* Identity column */
+.id { position: sticky; top: 40px; display: flex; flex-direction: column; gap: 22px; }
+.figure { width: 132px; height: 132px; color: var(--accent); }
+h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2.3rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+.post { font-family: var(--font-ui); font-size: 0.92rem; line-height: 1.5; color: var(--muted); margin: 0; }
+.post strong { color: var(--ink); font-weight: 500; }
+.links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-family: var(--font-ui); font-size: 0.9rem; }
+.links li { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.links .k { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.links .v { font-family: var(--font-mono); font-size: 0.82rem; overflow-wrap: anywhere; }
+/* The address is never written out in the HTML: it is assembled in the browser. */
+.eml:empty::before { content: attr(data-u) " [at] " attr(data-d); }
+.langs { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--font-ui); font-size: 0.86rem; }
+.langs a { color: var(--accent); text-decoration: none; padding: 2px 0; border-bottom: 1px solid transparent; }
+.langs a:hover { border-bottom-color: var(--accent); }
+.langs a[aria-current="page"] { color: var(--ink); font-weight: 600; border-bottom-color: var(--ink); }
+
+/* Reading column */
+main { display: flex; flex-direction: column; gap: 52px; min-width: 0; }
+section { display: flex; flex-direction: column; gap: 16px; }
+h2 {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+h3 { font-family: var(--font-ui); font-weight: 600; font-size: 0.95rem; margin: 10px 0 0; }
+p { margin: 0; max-width: 65ch; }
+.lede { font-size: 1.18rem; line-height: 1.55; }
+
+.areas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.area { background: var(--panel); border-radius: 6px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
+.area .name { font-family: var(--font-ui); font-weight: 600; font-size: 0.98rem; }
+.area .msc { font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent); }
+.area .what { font-size: 0.95rem; line-height: 1.5; color: var(--muted); }
+
+ol.refs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+ol.refs li { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 14px; align-items: baseline; }
+.yr { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.ref { display: flex; flex-direction: column; gap: 3px; max-width: 65ch; }
+.ref .t { font-weight: 600; line-height: 1.4; }
+.ref .m { font-size: 0.95rem; color: var(--muted); line-height: 1.5; }
+.ref .id-tag { font-family: var(--font-mono); font-size: 0.8rem; }
+.binom {
+  display: inline-flex; flex-direction: column; align-items: center;
+  vertical-align: middle; font-size: 0.7em; line-height: 1.05;
+  padding: 0 0.4em; margin: 0 0.1em;
+  border-left: 1px solid currentColor; border-right: 1px solid currentColor;
+  border-radius: 0.7em;
+}
+
+footer { font-family: var(--font-ui); font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; }
+
+@media (max-width: 820px) {
+  .wrap { grid-template-columns: minmax(0, 1fr); gap: 40px; padding: 28px 18px 56px; }
+  .id { position: static; }
+  .figure { width: 96px; height: 96px; }
+  .areas { grid-template-columns: minmax(0, 1fr); }
+  ol.refs li { grid-template-columns: 44px minmax(0, 1fr); gap: 10px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <aside class="id">
+    <!-- A cone over a conic with its vertex: the object of the involutive-cones paper -->
+    <svg class="figure" viewBox="0 0 132 132" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Un cono sobre una cónica, dibujado con su vértice">
+      <path d="M12 96 L44 70 L122 70 L90 96 Z" opacity="0.45"/>
+      <ellipse cx="66" cy="83" rx="30" ry="8"/>
+      <path d="M36 83 L66 16 L96 83"/>
+      <path d="M66 16 L52 90" opacity="0.5"/>
+      <path d="M66 16 L80 90" opacity="0.5"/>
+      <circle cx="66" cy="16" r="2.6" fill="currentColor"/>
+    </svg>
+
+    <h1>Gabriel Guedes</h1>
+
+    <p class="post"><strong>Profesor Asociado</strong><br>Departamento de Matemática<br>Universidade Federal Rural de Pernambuco (UFRPE)<br>Recife, Brasil</p>
+
+    <ul class="links">
+      <li><span class="k">E-mail</span><span class="v"><span class="eml" data-u="gabriel.guedes" data-d="ufrpe.br"></span></span></li>
+      <li><span class="k">ORCID</span><span class="v"><a href="https://orcid.org/0009-0008-8793-5250">0009-0008-8793-5250</a></span></li>
+      <li><span class="k">Scholar</span><span class="v"><a href="https://scholar.google.com/citations?user=XVkKvGEAAAAJ">XVkKvGEAAAAJ</a></span></li>
+      <li><span class="k">zbMATH</span><span class="v"><a href="https://zbmath.org/authors/guedes.gabriel-araujo">guedes.gabriel-araujo</a></span></li>
+      <li><span class="k">arXiv</span><span class="v"><a href="https://arxiv.org/a/guedes_g_1.html">guedes_g_1</a></span></li>
+      <li><span class="k">Lattes</span><span class="v"><a href="http://lattes.cnpq.br/6087142765405339">6087142765405339</a></span></li>
+      <li><span class="k">RG</span><span class="v"><a href="https://www.researchgate.net/profile/Gabriel-Guedes">ResearchGate</a></span></li>
+    </ul>
+
+    <nav class="langs" aria-label="Idioma">
+      <a href="/" lang="en" hreflang="en">English</a>
+      <a href="/pt/" lang="pt-BR" hreflang="pt-BR">Português</a>
+      <a href="/es/" lang="es" hreflang="es" aria-current="page">Español</a>
+      <a href="/fr/" lang="fr" hreflang="fr">Français</a>
+    </nav>
+  </aside>
+
+  <main>
+
+    <section id="about">
+      <h2>Presentación</h2>
+      <p class="lede">Soy matemático en la UFRPE, en Recife. Trabajo en geometría algebraica enumerativa y en teoría de números, y escribo para estudiantes que se preparan para olimpiadas de matemática.</p>
+      <p>Mi tesis doctoral (UFPE, 2014) cuenta variedades en espacios simplécticos proyectivos: variedades involutivas y lugares de contacto, con grados calculados mediante clases de Segre y la fórmula de residuos de Bott. Desde entonces mis intereses se han ampliado a las congruencias de coeficientes binomiales, los problemas diofánticos, las topologías aritméticas en los enteros y la combinatoria enumerativa.</p>
+    </section>
+
+    <section id="education">
+      <h2>Formación</h2>
+      <ol class="refs">
+        <li>
+          <span class="yr">2026</span>
+          <div class="ref">
+            <span class="m">Posdoctorado, Programa de Posgrado en Matemática, Universidade Federal de Pernambuco, 2025–2026.</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2014</span>
+          <div class="ref">
+            <span class="m">Doctorado en Matemática, Universidade Federal de Pernambuco.</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2011</span>
+          <div class="ref">
+            <span class="m">Escuela de verano en Teoría Analítica de Números y Aproximación Diofántica, University of Ottawa.</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2009</span>
+          <div class="ref">
+            <span class="m">Maestría en Matemática, Universidade Federal de Minas Gerais.</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2006</span>
+          <div class="ref">
+            <span class="m">Grado en Matemática (Bacharelado), Universidade Federal de Pernambuco.</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="research">
+      <h2>Intereses de investigación</h2>
+      <div class="areas">
+        <div class="area">
+          <span class="name">Geometría algebraica enumerativa</span>
+          <span class="msc">MSC 14N10</span>
+          <span class="what">Variedades involutivas, geometría proyectiva simpléctica y de contacto, clases de Segre, residuos de Bott.</span>
+        </div>
+        <div class="area">
+          <span class="name">Teoría de números</span>
+          <span class="msc">MSC 11A, 11D</span>
+          <span class="what">Congruencias binomiales, el recíproco del teorema de Wolstenholme, la conjetura de Giuga, primos de Wieferich, problemas diofánticos.</span>
+        </div>
+        <div class="area">
+          <span class="name">Topologías aritméticas</span>
+          <span class="msc">MSC 11B05</span>
+          <span class="what">Topologías en los enteros generadas por progresiones aritméticas, en la línea de Golomb y Kirch.</span>
+        </div>
+        <div class="area">
+          <span class="name">Combinatoria</span>
+          <span class="msc">MSC 05A15</span>
+          <span class="what">Polinomios de torre y permutaciones con posiciones restringidas, con implementaciones en SageMath.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="papers">
+      <h2>Trabajos</h2>
+
+      <h3>Preprints</h3>
+      <ol class="refs">
+        <li>
+          <span class="yr">2026</span>
+          <div class="ref">
+            <span class="t">Hypersurfaces containing involutive cones in projective symplectic spaces</span>
+            <span class="m">G. A. Guedes.</span>
+            <span class="id-tag"><a href="https://arxiv.org/abs/2609.19427">arXiv:2609.19427</a> [math.AG, math.SG]</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2026</span>
+          <div class="ref">
+            <span class="t">Structured solutions of prime-base binomial congruences</span>
+            <span class="m">G. A. Guedes, R. N. Machado Junior.</span>
+            <span class="id-tag"><a href="https://arxiv.org/abs/2606.30232">arXiv:2606.30232</a> [math.NT, math.CO]</span>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Artículos en revistas</h3>
+      <ol class="refs">
+        <li>
+          <span class="yr">2023</span>
+          <div class="ref">
+            <span class="t">Perfect numbers, Wieferich primes and the solutions of <span class="binom"><span>2n</span><span>n</span></span> ≡ 2<sup>n</sup> (mod n)</span>
+            <span class="m">G. Guedes, R. Machado. <i>Notes on Number Theory and Discrete Mathematics</i> 29 (2023), no. 4, 705–712.</span>
+            <span class="id-tag"><a href="https://doi.org/10.7546/nntdm.2023.29.4.705-712">doi:10.7546/nntdm.2023.29.4.705-712</a> · <a href="https://arxiv.org/abs/2609.03091">arXiv:2609.03091</a> · <a href="https://oeis.org/A084699">OEIS A084699</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2023</span>
+          <div class="ref">
+            <span class="t">Polinômios de torre e aplicações com implementações no SageMath</span>
+            <span class="m">R. N. Machado Junior, G. A. Guedes. <i>Revista Sergipana de Matemática e Educação Matemática</i> 8 (2023), 1–36. En portugués.</span>
+            <span class="id-tag"><a href="https://funes.uniandes.edu.co/wp-content/uploads/tainacan-items/32454/1597430/1795154566466442_Machado2023Polinomios.pdf">PDF</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2023</span>
+          <div class="ref">
+            <span class="t">Princípios combinatórios: bijeção, reflexão e os números de Catalan</span>
+            <span class="m">G. A. Guedes, R. N. Machado Junior. <i>Professor de Matemática Online</i> 11 (2023), no. 1, 175–193. Republicado como capítulo en <i>Educação Matemática: tópicos atuais em pesquisa</i>, vol. 2, Editora Científica Digital, 2024, 118–143. En portugués.</span>
+            <span class="id-tag"><a href="https://pmo.sbm.org.br/volumes-anteriores/">PMO, volumen 11</a></span>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Libros y notas de curso</h3>
+      <ol class="refs">
+        <li>
+          <span class="yr">2013</span>
+          <div class="ref">
+            <span class="t">Aritmética linear</span>
+            <span class="m">R. Gondim, G. Guedes, E. Naziazeno, B. Mourão. UNICAMP/IMECC, Campinas, 79 pp. Notas del minicurso impartido en la VI Bienal da SBM. En portugués.</span>
+            <span class="id-tag"><a href="https://www.univasf.edu.br/~felipe.wergete/ensino/profmat_arit/aritmetica_linear.pdf">Notas del curso (PDF)</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">online</span>
+          <div class="ref">
+            <span class="t">Análise combinatória e probabilidade: com aplicações no SageMath</span>
+            <span class="m">Con R. Machado. Libro abierto en línea. En portugués.</span>
+            <span class="id-tag"><a href="https://prof-ricardomachado.github.io/notas-combinatoria/">prof-ricardomachado.github.io/notas-combinatoria</a></span>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Textos olímpicos y de divulgación</h3>
+      <ol class="refs">
+        <li>
+          <span class="yr">2026</span>
+          <div class="ref">
+            <span class="t">Contagem dupla: contando a mesma coisa de dois modos distintos e a beleza da matemática</span>
+            <span class="m">G. A. Guedes. <i>É Matemática, Oxente!</i> no. 40 (2026). En portugués.</span>
+            <span class="id-tag"><a href="https://ematematicaoxente.com.br/e-matematica-oxente-numero-40/">Número 40</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2026</span>
+          <div class="ref">
+            <span class="t">Técnicas olímpicas em tabuleiros</span>
+            <span class="m">R. N. Machado, G. A. Guedes. <i>É Matemática, Oxente!</i> no. 38 (2026). En portugués.</span>
+            <span class="id-tag"><a href="https://ematematicaoxente.com.br/e-matematica-oxente-numero-38/">Número 38</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2023</span>
+          <div class="ref">
+            <span class="t">Pareamento de Gauss e somas telescópicas</span>
+            <span class="m">G. Guedes, E. H. C. Lira. <i>Revista da Olimpíada</i> 18 (2023), 24–41. En portugués.</span>
+            <span class="id-tag"><a href="https://files.cercomp.ufg.br/weby/up/1170/o/Revista18_completa.pdf">PDF</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2023</span>
+          <div class="ref">
+            <span class="t">Progressão aritmética e triângulo aritmético de números ímpares</span>
+            <span class="m">G. A. Guedes, T. Y. Tanaka, P. H. S. Viltal. <i>É Matemática, Oxente!</i> (2023), 2–13. En portugués.</span>
+            <span class="id-tag"><a href="https://ematematicaoxente.com.br/repositorio/">Archivo del periódico</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2021</span>
+          <div class="ref">
+            <span class="t">Invariantes: uma pequena jornada</span>
+            <span class="m">G. A. Guedes. <i>É Matemática, Oxente!</i> (2021), 2–6. En portugués.</span>
+            <span class="id-tag"><a href="https://ematematicaoxente.com.br/repositorio/">Archivo del periódico</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2017</span>
+          <div class="ref">
+            <span class="t">Truque com as relações de Girard</span>
+            <span class="m">G. A. Guedes. <i>É Matemática, Oxente!</i> (2017), 1–4. En portugués.</span>
+            <span class="id-tag"><a href="https://ematematicaoxente.com.br/repositorio/">Archivo del periódico</a></span>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Tesis</h3>
+      <ol class="refs">
+        <li>
+          <span class="yr">2014</span>
+          <div class="ref">
+            <span class="t">Um estudo enumerativo em variedades simpléticas projetivas</span>
+            <span class="m">Tesis doctoral, Universidade Federal de Pernambuco, Recife, 88 pp.</span>
+            <span class="id-tag"><a href="https://biblioteca.ufpe.br/acervo/346045/referencia">Registro en la biblioteca</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2009</span>
+          <div class="ref">
+            <span class="t">A conjectura de Catalan após Mihailescu</span>
+            <span class="m">Tesis de maestría, Universidade Federal de Minas Gerais, Belo Horizonte.</span>
+            <span class="id-tag"><a href="https://www.mat.ufmg.br/posgrad/wp-content/uploads/TesesDissertacoes/Diss165.pdf">PDF</a></span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="talks">
+      <h2>Minicursos y charlas seleccionados</h2>
+      <ol class="refs">
+        <li>
+          <span class="yr">2024</span>
+          <div class="ref">
+            <span class="t">Propriedades elementares que caracterizam números primos</span>
+            <span class="m">Seminario de Álgebra, Programa de Posgrado en Matemática, Universidade Federal de Uberlândia, 7 de junio de 2024.</span>
+            <span class="id-tag"><a href="https://ppmat.ime.ufu.br/tags/palestra-de-algebra">Página del seminario</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2023</span>
+          <div class="ref">
+            <span class="t">Equações diofantinas e os McNuggets</span>
+            <span class="m">Charla.</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2021</span>
+          <div class="ref">
+            <span class="t">Um passeio pelas olimpíadas de matemática e seus desdobramentos</span>
+            <span class="m">I Feira de Ciências e Tecnologia, Universidade de Pernambuco, Campus Mata Norte.</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2021</span>
+          <div class="ref">
+            <span class="t">Módulo de Aritmética, curso de capacitación de profesores de la Olimpíada Pernambucana de Matemática</span>
+            <span class="m">Minicurso.</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2018</span>
+          <div class="ref">
+            <span class="t">The Catalan conjecture and a book of Ribenboim</span>
+            <span class="m">Comunicación en congreso.</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2017</span>
+          <div class="ref">
+            <span class="t">Aniversário de 275 anos da vovó das conjecturas: a conjectura de Goldbach</span>
+            <span class="m">Comunicación en congreso, con M. A. Sobral F.</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2012</span>
+          <div class="ref">
+            <span class="t">Aritmética linear</span>
+            <span class="m">Minicurso en la VI Bienal da SBM, con R. Gondim, E. Naziazeno y B. Mourão.</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2008</span>
+          <div class="ref">
+            <span class="t">O teorema de Thaine</span>
+            <span class="m">XX Escola de Álgebra.</span>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2006</span>
+          <div class="ref">
+            <span class="t">Densidade de Schnirelmann, teorema de Mann e a conjectura de Goldbach</span>
+            <span class="m">Minicurso en la III Bienal da SBM, Goiânia, con E. S. G. Leandro.</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="outreach">
+      <h2>Olimpiadas y divulgación</h2>
+      <p>Fundé <a href="https://ematematicaoxente.com.br/">É Matemática, Oxente!</a>, el periódico de matemática olímpica del Departamento de Matemática de la UFRPE (ISSN 2526-8651). Se publica desde 2017 y llegó a su número 40 en 2026, con artículos breves, problemas y soluciones para estudiantes de Pernambuco y de otros lugares.</p>
+      <p>También fundé y organizo la Olimpíada Titãs da Matemática (ONTM), una olimpiada brasileña de matemática, y mantengo el canal de YouTube Matemática na Ativa. Muchas de mis preguntas de investigación nacen de problemas olímpicos.</p>
+    </section>
+
+    <section id="service">
+      <h2>Actividad académica</h2>
+      <p>Revisor de zbMATH Open desde 2026 y árbitro de <i>Professor de Matemática Online</i>. Profesor y director de tesis en la maestría profesional nacional PROFMAT desde 2012, con tres tesis de maestría y tres trabajos de fin de grado dirigidos en la UFRPE.</p>
+      <p>Colaborador de la OBMEP, la olimpiada brasileña de matemática de las escuelas públicas, desde 2011. Coordiné su programa OBMEP na Escola en la UFRPE de 2015 a 2022 y organicé la XII Semana da Matemática da UFRPE en 2015.</p>
+    </section>
+
+    <footer>
+      Departamento de Matemática, UFRPE, Recife, PE, Brasil
+    </footer>
+
+  </main>
+</div>
+<script>
+(function () {
+  var els = document.querySelectorAll('.eml');
+  for (var i = 0; i < els.length; i++) {
+    var addr = els[i].getAttribute('data-u') + String.fromCharCode(64) + els[i].getAttribute('data-d');
+    var link = document.createElement('a');
+    link.href = 'mai' + 'lto:' + addr;
+    link.textContent = addr;
+    els[i].appendChild(link);
+  }
+})();
+</script>
+</body>
+</html>

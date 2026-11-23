@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "en": {
+      "name": "English",
+      "description": "Gabriel Guedes, mathematician at UFRPE (Recife, Brazil). Enumerative algebraic geometry, number theory, combinatorics.",
+      "figure": "A cone over a conic, drawn with its vertex",
+      "nav": "Language"
+    },
+    "pt": {
+      "name": "Português",
+      "description": "Gabriel Guedes, matemático na UFRPE (Recife, Brasil). Geometria algébrica enumerativa, teoria dos números, combinatória.",
+      "figure": "Um cone sobre uma cônica, desenhado com seu vértice",
+      "nav": "Idioma"
+    },
+    "es": {
+      "name": "Español",
+      "description": "Gabriel Guedes, matemático en la UFRPE (Recife, Brasil). Geometría algebraica enumerativa, teoría de números, combinatoria.",
+      "figure": "Un cono sobre una cónica, dibujado con su vértice",
+      "nav": "Idioma"
+    },
+    "fr": {
+      "name": "Français",
+      "description": "Gabriel Guedes, mathématicien à l'UFRPE (Recife, Brésil). Géométrie algébrique énumérative, théorie des nombres, combinatoire.",
+      "figure": "Un cône sur une conique, dessiné avec son sommet",
+      "nav": "Langue"
+    }
+  },
+  "strings": {
+    "<strong>Associate Professor</strong><br>Department of Mathematics<br>Universidade Federal Rural de Pernambuco (UFRPE)<br>Recife, Brazil": {
+      "es": "<strong>Profesor Asociado</strong><br>Departamento de Matemática<br>Universidade Federal Rural de Pernambuco (UFRPE)<br>Recife, Brasil",
+      "fr": "<strong>Professeur associé</strong><br>Département de mathématiques<br>Universidade Federal Rural de Pernambuco (UFRPE)<br>Recife, Brésil"
+    },
+    "About": { "es": "Presentación", "fr": "Présentation" },
+    "I am a mathematician at UFRPE, in Recife. I work in enumerative algebraic geometry and in number theory, and I write for students who are training for mathematical olympiads.": {
+      "es": "Soy matemático en la UFRPE, en Recife. Trabajo en geometría algebraica enumerativa y en teoría de números, y escribo para estudiantes que se preparan para olimpiadas de matemática.",
+      "fr": "Je suis mathématicien à l'UFRPE, à Recife. Je travaille en géométrie algébrique énumérative et en théorie des nombres, et j'écris pour les élèves qui se préparent aux olympiades de mathématiques."
+    },
+    "My doctoral thesis (UFPE, 2014) counts varieties in projective symplectic spaces: involutive varieties and contact loci, with degrees computed through Segre classes and Bott's residue formula. Since then my interests have widened to congruences for binomial coefficients, Diophantine problems, arithmetic topologies on the integers and enumerative combinatorics.": {
+      "es": "Mi tesis doctoral (UFPE, 2014) cuenta variedades en espacios simplécticos proyectivos: variedades involutivas y lugares de contacto, con grados calculados mediante clases de Segre y la fórmula de residuos de Bott. Desde entonces mis intereses se han ampliado a las congruencias de coeficientes binomiales, los problemas diofánticos, las topologías aritméticas en los enteros y la combinatoria enumerativa.",
+      "fr": "Ma thèse de doctorat (UFPE, 2014) compte des variétés dans les espaces symplectiques projectifs : variétés involutives et lieux de contact, avec des degrés calculés au moyen des classes de Segre et de la formule des résidus de Bott. Depuis, mes intérêts se sont élargis aux congruences de coefficients binomiaux, aux problèmes diophantiens, aux topologies arithmétiques sur les entiers et à la combinatoire énumérative."
+    },
+    "Education": { "es": "Formación", "fr": "Formation" },
+    "Postdoctoral research, Graduate Program in Mathematics, Universidade Federal de Pernambuco, 2025–2026.": {
+      "es": "Posdoctorado, Programa de Posgrado en Matemática, Universidade Federal de Pernambuco, 2025–2026.",
+      "fr": "Post-doctorat, Programme de troisième cycle en mathématiques, Universidade Federal de Pernambuco, 2025–2026."
+    },
+    "Ph.D. in Mathematics, Universidade Federal de Pernambuco.": {
+      "es": "Doctorado en Matemática, Universidade Federal de Pernambuco.",
+      "fr": "Doctorat en mathématiques, Universidade Federal de Pernambuco."
+    },
+    "Summer School in Analytic Number Theory and Diophantine Approximation, University of Ottawa.": {
+      "es": "Escuela de verano en Teoría Analítica de Números y Aproximación Diofántica, University of Ottawa.",
+      "fr": "École d'été en théorie analytique des nombres et approximation diophantienne, Université d'Ottawa."
+    },
+    "M.Sc. in Mathematics, Universidade Federal de Minas Gerais.": {
+      "es": "Maestría en Matemática, Universidade Federal de Minas Gerais.",
+      "fr": "Master en mathématiques, Universidade Federal de Minas Gerais."
+    },
+    "B.Sc. in Mathematics, Universidade Federal de Pernambuco.": {
+      "es": "Grado en Matemática (Bacharelado), Universidade Federal de Pernambuco.",
+      "fr": "Licence en mathématiques (Bacharelado), Universidade Federal de Pernambuco."
+    },
+    "Research interests": { "es": "Intereses de investigación", "fr": "Thèmes de recherche" },
+    "Enumerative algebraic geometry": { "es": "Geometría algebraica enumerativa", "fr": "Géométrie algébrique énumérative" },
+    "Involutive varieties, contact and symplectic projective geometry, Segre classes, Bott residues.": {
+      "es": "Variedades involutivas, geometría proyectiva simpléctica y de contacto, clases de Segre, residuos de Bott.",
+      "fr": "Variétés involutives, géométrie projective symplectique et de contact, classes de Segre, résidus de Bott."
+    },
+    "Number theory": { "es": "Teoría de números", "fr": "Théorie des nombres" },
+    "Binomial congruences, the converse of Wolstenholme's theorem, Giuga's conjecture, Wieferich primes, Diophantine problems.": {
+      "es": "Congruencias binomiales, el recíproco del teorema de Wolstenholme, la conjetura de Giuga, primos de Wieferich, problemas diofánticos.",
+      "fr": "Congruences binomiales, la réciproque du théorème de Wolstenholme, la conjecture de Giuga, nombres premiers de Wieferich, problèmes diophantiens."
+    },
+    "Arithmetic topologies": { "es": "Topologías aritméticas", "fr": "Topologies arithmétiques" },
+    "Topologies on the integers generated by arithmetic progressions, in the line of Golomb and Kirch.": {
+      "es": "Topologías en los enteros generadas por progresiones aritméticas, en la línea de Golomb y Kirch.",
+      "fr": "Topologies sur les entiers engendrées par des progressions arithmétiques, dans la lignée de Golomb et Kirch."
+    },
+    "Combinatorics": { "es": "Combinatoria", "fr": "Combinatoire" },
+    "Rook polynomials and permutations with restricted positions, with SageMath implementations.": {
+      "es": "Polinomios de torre y permutaciones con posiciones restringidas, con implementaciones en SageMath.",
+      "fr": "Polynômes de tours et permutations à positions restreintes, avec des implémentations en SageMath."
+    },
+    "Papers": { "es": "Trabajos", "fr": "Travaux" },
+    "Preprints": { "es": "Preprints", "fr": "Prépublications" },
+    "Journal articles": { "es": "Artículos en revistas", "fr": "Articles de revues" },
+    "In Portuguese.": { "es": "En portugués.", "fr": "En portugais." },
+    " In Portuguese.": { "es": " En portugués.", "fr": " En portugais." },
+    "Reprinted as a chapter in <i>Educação Matemática: tópicos atuais em pesquisa</i>, vol. 2, Editora Científica Digital, 2024, 118–143. In Portuguese.": {
+      "es": "Republicado como capítulo en <i>Educação Matemática: tópicos atuais em pesquisa</i>, vol. 2, Editora Científica Digital, 2024, 118–143. En portugués.",
+      "fr": "Repris comme chapitre dans <i>Educação Matemática: tópicos atuais em pesquisa</i>, vol. 2, Editora Científica Digital, 2024, 118–143. En portugais."
+    },
+    "PMO, volume 11": { "es": "PMO, volumen 11", "fr": "PMO, volume 11" },
+    "Books and lecture notes": { "es": "Libros y notas de curso", "fr": "Livres et notes de cours" },
+    "Notes of the short course given at the VI Bienal da SBM. In Portuguese.": {
+      "es": "Notas del minicurso impartido en la VI Bienal da SBM. En portugués.",
+      "fr": "Notes du mini-cours donné à la VI Bienal da SBM. En portugais."
+    },
+    "Course notes (PDF)": { "es": "Notas del curso (PDF)", "fr": "Notes du cours (PDF)" },
+    "With R. Machado. Open online book. In Portuguese.": {
+      "es": "Con R. Machado. Libro abierto en línea. En portugués.",
+      "fr": "Avec R. Machado. Livre ouvert en ligne. En portugais."
+    },
+    "Olympiad and expository writing": { "es": "Textos olímpicos y de divulgación", "fr": "Textes olympiques et de vulgarisation" },
+    "Issue 40": { "es": "Número 40", "fr": "Numéro 40" },
+    "Issue 38": { "es": "Número 38", "fr": "Numéro 38" },
+    "Journal archive": { "es": "Archivo del periódico", "fr": "Archives du journal" },
+    "Theses": { "es": "Tesis", "fr": "Thèse et mémoire" },
+    "Ph.D. thesis, Universidade Federal de Pernambuco, Recife, 88 pp.": {
+      "es": "Tesis doctoral, Universidade Federal de Pernambuco, Recife, 88 pp.",
+      "fr": "Thèse de doctorat, Universidade Federal de Pernambuco, Recife, 88 p."
+    },
+    "Library record": { "es": "Registro en la biblioteca", "fr": "Notice de la bibliothèque" },
+    "M.Sc. dissertation, Universidade Federal de Minas Gerais, Belo Horizonte.": {
+      "es": "Tesis de maestría, Universidade Federal de Minas Gerais, Belo Horizonte.",
+      "fr": "Mémoire de master, Universidade Federal de Minas Gerais, Belo Horizonte."
+    },
+    "Selected short courses and talks": { "es": "Minicursos y charlas seleccionados", "fr": "Mini-cours et exposés choisis" },
+    "Algebra seminar, Graduate Program in Mathematics, Universidade Federal de Uberlândia, 7 June 2024.": {
+      "es": "Seminario de Álgebra, Programa de Posgrado en Matemática, Universidade Federal de Uberlândia, 7 de junio de 2024.",
+      "fr": "Séminaire d'algèbre, Programme de troisième cycle en mathématiques, Universidade Federal de Uberlândia, 7 juin 2024."
+    },
+    "Seminar page": { "es": "Página del seminario", "fr": "Page du séminaire" },
+    "Talk.": { "es": "Charla.", "fr": "Exposé." },
+    "I Feira de Ciências e Tecnologia, Universidade de Pernambuco, Campus Mata Norte.": {
+      "es": "I Feira de Ciências e Tecnologia, Universidade de Pernambuco, Campus Mata Norte.",
+      "fr": "I Feira de Ciências e Tecnologia, Universidade de Pernambuco, Campus Mata Norte."
+    },
+    "Arithmetic module, teacher training course of the Olimpíada Pernambucana de Matemática": {
+      "es": "Módulo de Aritmética, curso de capacitación de profesores de la Olimpíada Pernambucana de Matemática",
+      "fr": "Module d'arithmétique, formation des enseignants de l'Olimpíada Pernambucana de Matemática"
+    },
+    "Short course.": { "es": "Minicurso.", "fr": "Mini-cours." },
+    "Conference talk.": { "es": "Comunicación en congreso.", "fr": "Communication dans un congrès." },
+    "Conference talk, with M. A. Sobral F.": {
+      "es": "Comunicación en congreso, con M. A. Sobral F.",
+      "fr": "Communication dans un congrès, avec M. A. Sobral F."
+    },
+    "Short course at the VI Bienal da SBM, with R. Gondim, E. Naziazeno and B. Mourão.": {
+      "es": "Minicurso en la VI Bienal da SBM, con R. Gondim, E. Naziazeno y B. Mourão.",
+      "fr": "Mini-cours à la VI Bienal da SBM, avec R. Gondim, E. Naziazeno et B. Mourão."
+    },
+    "Short course at the III Bienal da SBM, Goiânia, with E. S. G. Leandro.": {
+      "es": "Minicurso en la III Bienal da SBM, Goiânia, con E. S. G. Leandro.",
+      "fr": "Mini-cours à la III Bienal da SBM, Goiânia, avec E. S. G. Leandro."
+    },
+    "Olympiads and outreach": { "es": "Olimpiadas y divulgación", "fr": "Olympiades et vulgarisation" },
+    "I founded <a href=\"https://ematematicaoxente.com.br/\">É Matemática, Oxente!</a>, the olympiad mathematics newspaper of the Department of Mathematics at UFRPE (ISSN 2526-8651). It has been published since 2017 and reached its 40th issue in 2026, with short articles, problems and solutions for school students in Pernambuco and beyond.": {
+      "es": "Fundé <a href=\"https://ematematicaoxente.com.br/\">É Matemática, Oxente!</a>, el periódico de matemática olímpica del Departamento de Matemática de la UFRPE (ISSN 2526-8651). Se publica desde 2017 y llegó a su número 40 en 2026, con artículos breves, problemas y soluciones para estudiantes de Pernambuco y de otros lugares.",
+      "fr": "J'ai fondé <a href=\"https://ematematicaoxente.com.br/\">É Matemática, Oxente!</a>, le journal de mathématiques olympiques du Département de mathématiques de l'UFRPE (ISSN 2526-8651). Il paraît depuis 2017 et a atteint son 40<sup>e</sup> numéro en 2026, avec de courts articles, des problèmes et des solutions pour les élèves du Pernambouc et d'ailleurs."
+    },
+    "I also founded and organize the Olimpíada Titãs da Matemática (ONTM), a Brazilian mathematics olympiad, and I run the YouTube channel Matemática na Ativa. Olympiad problems are where many of my research questions begin.": {
+      "es": "También fundé y organizo la Olimpíada Titãs da Matemática (ONTM), una olimpiada brasileña de matemática, y mantengo el canal de YouTube Matemática na Ativa. Muchas de mis preguntas de investigación nacen de problemas olímpicos.",
+      "fr": "J'ai aussi fondé et j'organise l'Olimpíada Titãs da Matemática (ONTM), une olympiade brésilienne de mathématiques, et j'anime la chaîne YouTube Matemática na Ativa. Beaucoup de mes questions de recherche naissent de problèmes d'olympiades."
+    },
+    "Service": { "es": "Actividad académica", "fr": "Activités" },
+    "Reviewer for zbMATH Open since 2026, and referee for <i>Professor de Matemática Online</i>. Advisor in the national professional master's program PROFMAT since 2012, with three master's dissertations and three undergraduate theses supervised at UFRPE.": {
+      "es": "Revisor de zbMATH Open desde 2026 y árbitro de <i>Professor de Matemática Online</i>. Profesor y director de tesis en la maestría profesional nacional PROFMAT desde 2012, con tres tesis de maestría y tres trabajos de fin de grado dirigidos en la UFRPE.",
+      "fr": "Rapporteur pour zbMATH Open depuis 2026 et évaluateur pour <i>Professor de Matemática Online</i>. Enseignant et directeur de mémoires dans le master professionnel national PROFMAT depuis 2012, avec trois mémoires de master et trois mémoires de licence encadrés à l'UFRPE."
+    },
+    "Collaborator of the Brazilian public-school olympiad OBMEP since 2011. I coordinated its OBMEP na Escola program at UFRPE from 2015 to 2022, and organized the XII Semana da Matemática da UFRPE in 2015.": {
+      "es": "Colaborador de la OBMEP, la olimpiada brasileña de matemática de las escuelas públicas, desde 2011. Coordiné su programa OBMEP na Escola en la UFRPE de 2015 a 2022 y organicé la XII Semana da Matemática da UFRPE en 2015.",
+      "fr": "Collaborateur de l'OBMEP, l'olympiade brésilienne de mathématiques des écoles publiques, depuis 2011. J'ai coordonné son programme OBMEP na Escola à l'UFRPE de 2015 à 2022 et organisé la XII Semana da Matemática da UFRPE en 2015."
+    },
+    "Departamento de Matemática, UFRPE, Recife, PE, Brazil": {
+      "es": "Departamento de Matemática, UFRPE, Recife, PE, Brasil",
+      "fr": "Departamento de Matemática, UFRPE, Recife, PE, Brésil"
+    }
+  }
+}
